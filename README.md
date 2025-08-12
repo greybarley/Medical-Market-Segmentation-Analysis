@@ -62,6 +62,3 @@ A Streamlit web application for interactive **Exploratory Data Analysis (EDA)**,
 - Built for medical data insights, patient segmentation, and diagnostic result classification  
 - Inspired by real-world healthcare analytics applications  
 ---
-## 📬 Contact
-
-For questions or collaborations, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/aniket-gupta-90b49725a/) or [Email](aniket25287@gmail.com).
