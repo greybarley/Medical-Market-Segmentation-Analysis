@@ -135,7 +135,7 @@ if uploaded_file:
         # Map target labels to numeric
         df_ml['Test Results'] = df_ml['Test Results'].replace({'Normal': 1, 'Inconclusive': 0, 'Abnormal': 2})
     
-        # Drop rows with missing target
+        # Drop rows with missingtarget
         X = df_ml.drop(columns=['Test Results'])
         y = df_ml['Test Results']
         
