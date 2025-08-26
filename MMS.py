@@ -17,7 +17,7 @@ from sklearn.decomposition import PCA
 from sklearn.impute import SimpleImputer
 import numpy as np
 
-# Set up Streamlit layout
+# Set up Streamlitlayout
 st.set_page_config(page_title="Medical Segmentation Dashboard")
 
 @st.cache_data
@@ -139,10 +139,10 @@ if uploaded_file:
         X = df_ml.drop(columns=['Test Results'])
         y = df_ml['Test Results']
         
-        # Convert to numeric with coercion
+         # Convert to numeric with coercion
         X_numeric = X.apply(pd.to_numeric, errors='coerce')
         
-        # Select columns with at least one non-NaN value
+         # Select columns with at least one non-NaN value
         valid_cols = [col for col in X_numeric.columns if X_numeric[col].notna().any()]
         X_valid = X_numeric[valid_cols]
         
@@ -150,9 +150,9 @@ if uploaded_file:
         X_imputed_array = imputer.fit_transform(X_valid)
         
         X_imputed = pd.DataFrame(X_imputed_array, columns=valid_cols)
-        X_imputed.index = X_numeric.index  # preserve index
+        X_imputed.index = X_numeric.index   # preserve index
         
-        # Combine with target
+          # Combine with target
         combined = pd.concat([X_imputed, y.reset_index(drop=True)], axis=1)
         
         if combined.empty or combined.shape[0] == 0:
@@ -165,7 +165,7 @@ if uploaded_file:
         st.write("Preprocessed features shape:", X.shape)
         st.write("Preprocessed target shape:", y.shape)
     
-        # 70% train, 30% test split
+         # 70% train, 30% test split
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=0.3, random_state=42
         )
