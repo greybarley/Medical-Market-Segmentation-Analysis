@@ -194,7 +194,7 @@ if uploaded_file:
             ax_cm.set_ylabel("Actual")
             st.pyplot(fig_cm)
     
-        best_model = max(results, key=results.get)
+        best_model  = max(results, key=results.get)
         st.success(f"Best performing model: {best_model} with accuracy {results[best_model]:.3f}")
 
 
