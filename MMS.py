@@ -17,7 +17,7 @@ from sklearn.decomposition import PCA
 from sklearn.impute import SimpleImputer
 import numpy as np
 
-# Set up Streamlitlayout
+# Set up Streamlit layout
 st.set_page_config(page_title="Medical Segmentation Dashboard")
 
 @st.cache_data
@@ -115,7 +115,7 @@ if uploaded_file:
         pca_df = pd.DataFrame(X_pca, columns=['PCA1', 'PCA2'])
         pca_df['Cluster'] = clusters
 
-        fig5, ax5 = plt.subplots()
+        fig5, ax5  = plt.subplots()
         sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='Cluster', palette='tab10', ax=ax5)
         ax5.set_title("Patient Clusters Based on Age & Billing")
         st.pyplot(fig5)
@@ -177,7 +177,7 @@ if uploaded_file:
             "Random Forest": RandomForestClassifier()
         }
     
-        results = {}
+        results =  {}
         for name, model in models.items():
             model.fit(X_train, y_train)
             preds = model.predict(X_test)
