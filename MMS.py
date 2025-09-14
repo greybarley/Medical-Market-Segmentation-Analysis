@@ -1,4 +1,4 @@
-# streamlit_medical_segmentation_app.py
+#  streamlit_medical_segmentation_app.py
 import requests
 from PIL import Image
 from io import BytesIO
@@ -17,7 +17,7 @@ from sklearn.decomposition import PCA
 from sklearn.impute import SimpleImputer
 import numpy as np
 
-# Set up Streamlit layout
+#  Set up Streamlit layout
 st.set_page_config(page_title="Medical Segmentation Dashboard")
 
 @st.cache_data
